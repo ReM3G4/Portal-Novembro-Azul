@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portal Novembro Azul</title>
+</head>
+<body>
+
+<header>
+    <h1>🎗️ Novembro Azul: Um Toque pela Vida</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#Estatísticas">Estatísticas</a></li>
+            <li><a href="#Exames">Exames</a></li>
+            <li><a href="#Agendamento">Agendamento</a></li>
+        </ul>
+    </nav>
+    <div class="destaque">
+        💙 Mês Mundial de Combate ao Câncer de Próstata.
+    </div>
+</header>
+
+<section id="home" class="metricas">
+    <div class="card">
+        <h2>12.450</h2>
+        <p>Exames Realizados</p>
+        <span>Este mês</span>
+    </div>
+
+    <div class="card">
+        <h2>98.2%</h2>
+        <p>Chance de cura</p>
+        <span>Com diagnóstico precoce</span>
+    </div>
+
+    <div class="card">
+        <h2>18</h2>
+        <p>Clínicas e Postos</p>
+        <span>Parceiros ativos</span>
+    </div>
+
+    <div class="card">
+        <h2>45+</h2>
+        <p>Idade recomendada</p>
+        <span>Início do rastreamento</span>
+    </div>
+</section>
+
+<div id="Estatísticas" class="estatisticas"></div>
+
+<div id="Exames" class="tabela-container">
+    <h2>Agendamentos e Exames</h2>
+    <p class="subtitulo">Controle diário de consultas e procedimentos</p>
+
+    <table class="tabela-exames">
+        <thead>
+            <tr>
+                <th>Horário</th>
+                <th>Paciente</th>
+                <th>Idade</th>
+                <th>Tipo de Exame</th>
+                <th>Médico Urologista</th>
+                <th>Status do Exame</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>08:00</td>
+                <td>Paciente 01</td>
+                <td>52</td>
+                <td>Consulta Preventiva</td>
+                <td rowspan="2">Dr. Carlos Mendes</td>
+                <td><span class="status concluido">Concluído</span></td>
+            </tr>
+            <tr>
+                <td>08:30</td>
+                <td>Paciente 02</td>
+                <td>61</td>
+                <td>Exame de PSA</td>
+                <td><span class="status andamento">Em Andamento</span></td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Paciente 03</td>
+                <td>58</td>
+                <td>Ultrassonografia de Próstata</td>
+                <td rowspan="2">Dra. Mariana Costa</td>
+                <td><span class="status agendado">Agendado</span></td>
+            </tr>
+            <tr>
+                <td>09:30</td>
+                <td>Paciente 04</td>
+                <td>67</td>
+                <td>Biópsia</td>
+                <td><span class="status concluido">Concluído</span></td>
+            </tr>
+            <tr>
+                <td>10:00</td>
+                <td>Paciente 05</td>
+                <td>49</td>
+                <td>Exame de PSA</td>
+                <td rowspan="2">Dr. Roberto Almeida</td>
+                <td><span class="status andamento">Em Andamento</span></td>
+            </tr>
+            <tr>
+                <td>10:30</td>
+                <td>Paciente 06</td>
+                <td>72</td>
+                <td>Consulta Preventiva</td>
+                <td><span class="status agendado">Agendado</span></td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td>Paciente 07</td>
+                <td>64</td>
+                <td>Ultrassonografia de Próstata</td>
+                <td rowspan="2">Dr. Felipe Santos</td>
+                <td><span class="status concluido">Concluído</span></td>
+            </tr>
+            <tr>
+                <td>11:30</td>
+                <td>Paciente 08</td>
+                <td>55</td>
+                <td>Biópsia</td>
+                <td><span class="status agendado">Agendado</span></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">Total de atendimentos do dia</td>
+                <td colspan="2">08 pacientes cadastrados</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<section class="secao-recomendacoes">
+    <div class="titulo-secao">
+        <h2>Recomendações e Prevenção</h2>
+        <p>Cuide da sua saúde. A prevenção é o melhor caminho!</p>
+    </div>
+
+    <div class="container-recomendacoes">
+        <div class="card-recomendacao">
+            <div class="icone-card">🥗</div>
+            <h3>Alimentação Saudável e Prática de Atividades Físicas</h3>
+            <p>
+                Mantenha uma alimentação equilibrada, rica em frutas,
+                verduras e legumes. Pratique atividades físicas
+                regularmente e mantenha hábitos saudáveis.
+            </p>
+            <a href="#home" class="link-card">Saiba mais →</a>
+        </div>
+
+        <div class="card-recomendacao">
+            <div class="icone-card">🩺</div>
+            <h3>A Importância dos Exames Anuais de PSA e Toque</h3>
+            <p>
+                Converse com um profissional de saúde sobre os exames
+                preventivos, seus benefícios, limitações e o momento
+                adequado para realizá-los.
+            </p>
+            <a href="#Exames" class="link-card">Saiba mais →</a>
+        </div>
+
+        <div class="card-recomendacao">
+            <div class="icone-card">🧬</div>
+            <h3>Histórico Familiar e Fatores de Risco</h3>
+            <p>
+                Informe seu médico sobre casos de câncer de próstata
+                na família e outros fatores de risco para avaliar
+                individualmente a necessidade de acompanhamento.
+            </p>
+            <a href="#Agendamento" class="link-card">Saiba mais →</a>
+        </div>
+    </div>
+</section>
+
+<section id="Agendamento" class="secao-agendamento">
+    <div class="card-agendamento">
+        <div class="titulo-agendamento">
+            <h2>Agendamento Rápido</h2>
+            <p>Preencha seus dados e agende sua consulta gratuita.</p>
+        </div>
+
+        <form class="form-agendamento">
+            <div class="campo">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="campo">
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" placeholder="Digite sua idade" min="1" max="120" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <div class="campo">
+                <label for="exame">Exame Desejado</label>
+                <select id="exame" required>
+                    <option value="">Selecione um exame</option>
+                    <option value="consulta">Consulta Preventiva</option>
+                    <option value="psa">Exame de PSA</option>
+                    <option value="ultrassom">Ultrassonografia de Próstata</option>
+                    <option value="biopsia">Biópsia</option>
+                </select>
+            </div>
+
+            <div class="campo campo-completo">
+                <button type="submit" class="btn-agendar">
+                    Agendar Consulta Gratuita 🎗️
+                </button>
+            </div>
+        </form>
+
+        <p class="aviso-agendamento">
+            Seus dados devem ser tratados com segurança e privacidade.
+        </p>
+    </div>
+</section>
+
+<footer class="rodape">
+    <p>
+        🎗️ Campanha Novembro Azul |
+        Cuide de quem você ama, previna-se!
+    </p>
+</footer>
+
+</body>
+</html>

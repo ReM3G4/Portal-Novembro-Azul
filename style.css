@@ -1,0 +1,523 @@
+
+:root {
+  --azul-profundo: #07152b;
+  --azul-noite: #0c2347;
+  --azul-card: #132f5d;
+  --azul-royal: #1d4ed8;
+  --azul-celeste: #38bdf8;
+  --azul-claro: #dbeafe;
+  --branco: #ffffff;
+  --cinza-texto: #cbd5e1;
+  --sucesso: #10b981;
+  --alerta: #f59e0b;
+}
+
+body {
+  background: var(--azul-profundo);
+  color: var(--branco);
+  font-family: Arial, sans-serif;
+}
+
+header {
+    background: var(--azul-noite);
+    color: var(--branco);
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 2px solid var(--azul-celeste);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: var(--branco);
+    font-size: 32px;
+    margin: 0 0 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: var(--azul-claro);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease,
+                border 0.3s ease;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--azul-celeste);
+    border-bottom: 2px solid var(--azul-celeste);
+}
+
+.destaque {
+    background: var(--azul-card);
+    color: var(--azul-celeste);
+    padding: 15px 20px;
+    margin: 25px auto 0;
+    max-width: 600px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .destaque {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+.metricas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: var(--azul-card);
+  border: 1px solid rgba(219, 234, 254, 0.12);
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+  color: var(--azul-celeste);
+  font-size: 32px;
+  margin: 0 0 12px;
+}
+
+.card p {
+  color: var(--branco);
+  font-weight: bold;
+}
+
+.card span {
+  color: var(--cinza-texto);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .metricas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .metricas {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tabela-container {
+  background: var(--azul-noite);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  overflow-x: auto;
+}
+
+.tabela-container h2 {
+  color: var(--branco);
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  color: var(--cinza-texto);
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.tabela-exames {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--branco);
+  min-width: 850px;
+}
+
+.tabela-exames th,
+.tabela-exames td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.tabela-exames thead {
+  background: var(--azul-royal);
+}
+
+.tabela-exames th {
+  color: var(--branco);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.tabela-exames tbody tr:nth-child(even) {
+  background: var(--azul-card);
+}
+
+.tabela-exames tbody tr:nth-child(odd) {
+  background: var(--azul-noite);
+}
+
+.tabela-exames tbody tr {
+  transition: background 0.3s ease;
+}
+
+.tabela-exames tbody tr:hover {
+  background: #1e497d;
+}
+
+.tabela-exames tfoot {
+  background: var(--azul-royal);
+  font-weight: bold;
+}
+
+.tabela-exames tfoot td {
+  padding: 16px;
+  color: var(--branco);
+}
+
+
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.concluido {
+  background: #bbf7d0;
+  color: #46233d;
+}
+
+.andamento {
+  background: #fde68a;
+  color: #78350f;
+}
+
+.agendado {
+  background: #bfdbfe;
+  color: #1e3a8a;
+}
+
+@media (max-width: 768px) {
+  .tabela-container {
+    padding: 15px;
+  }
+
+  .tabela-exames th,
+  .tabela-exames td {
+    padding: 12px 14px;
+  }
+}
+
+
+.secao-recomendacoes {
+    background: var(--azul-profundo);
+    padding: 40px 25px;
+    border-radius: 12px;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-secao h2 {
+    color: var(--branco);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.titulo-secao p {
+    color: var(--cinza-texto);
+    font-size: 15px;
+}
+
+.container-recomendacoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-recomendacao {
+    background: var(--azul-card);
+    flex: 1 1 280px;
+    max-width: 380px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card-recomendacao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.icone-card {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.card-recomendacao h3 {
+    color: var(--azul-celeste);
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.card-recomendacao p {
+    color: var(--cinza-texto);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.link-card {
+    display: inline-block;
+    color: var(--azul-celeste);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.link-card:hover {
+    color: var(--azul-claro);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container-recomendacoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-recomendacao {
+        max-width: 100%;
+    }
+
+    .titulo-secao h2 {
+        font-size: 23px;
+    }
+}
+
+
+.secao-agendamento {
+    background: var(--azul-profundo);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-agendamento {
+    background: var(--azul-card);
+    width: 100%;
+    max-width: 750px;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.titulo-agendamento {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-agendamento h2 {
+    color: var(--branco);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.titulo-agendamento p {
+    color: var(--cinza-texto);
+    font-size: 14px;
+}
+
+.form-agendamento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: var(--azul-claro);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 13px 15px;
+    background: var(--azul-noite);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: var(--branco);
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.campo input::placeholder {
+    color: #94a3b8;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--azul-celeste);
+    box-shadow: 0 0 0 3px rgba(56,189,248,0.15);
+}
+
+.campo select {
+    cursor: pointer;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.btn-agendar {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(
+        135deg,
+        var(--azul-royal),
+        var(--azul-celeste)
+    );
+    border: none;
+    border-radius: 8px;
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.btn-agendar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(29,78,216,0.4);
+}
+
+.aviso-agendamento {
+    color: var(--cinza-texto);
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .card-agendamento {
+        padding: 25px 18px;
+    }
+
+    .form-agendamento {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    .titulo-agendamento h2 {
+        font-size: 23px;
+    }
+}
+
+
+.rodape {
+    background: var(--azul-noite);
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 2px solid var(--azul-celeste);
+    margin-top: 40px;
+}
+
+.rodape p {
+    color: var(--azul-claro);
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .rodape {
+        padding: 20px 15px;
+    }
+
+    .rodape p {
+        font-size: 13px;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
